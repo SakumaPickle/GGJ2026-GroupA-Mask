@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement_RB : MonoBehaviour
 {
+	[SerializeField] private Game _gameManager;
+
 	[SerializeField] private StarterAssetsInputs _starterInputs;
 	[SerializeField] private PlayerInput _playerInput;
 
@@ -87,12 +89,19 @@ public class PlayerMovement_RB : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if (!_gameManager.IsPlaying)
+		{
+			ApplyPlanarControl(Vector3.zero);
+			var av = _rb.angularVelocity;
+			av.y = 0f;
+			_rb.angularVelocity = av;
+			return;
+		}
+
 		UpdateGroundCheck();
 
 		// Drag switching (optional)
 		_rb.linearDamping = _isGrounded ? _linearDragGround : _linearDragAir;
-
-
 
 		Vector2 moveInput = GetEffectiveMoveInput();
 
