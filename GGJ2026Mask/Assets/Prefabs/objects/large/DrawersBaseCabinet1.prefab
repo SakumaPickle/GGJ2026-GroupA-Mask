@@ -79,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07e3498fa42ec9943ba9b8bb94c62eb0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6537125275598325534}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07e3498fa42ec9943ba9b8bb94c62eb0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2817656061184924474}
   m_SourcePrefab: {fileID: 100100000, guid: 07e3498fa42ec9943ba9b8bb94c62eb0, type: 3}
 --- !u!1 &4168336650071264341 stripped
 GameObject:
@@ -112,3 +115,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2817656061184924474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168336650071264341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd360e47e4aae94ca50d6e1e2b53bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DespawnEnemyMarker
