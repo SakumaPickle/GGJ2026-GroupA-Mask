@@ -3,7 +3,7 @@ using UnityEngine;
 public class VisibleCheck : MonoBehaviour
 {
     Camera m_MainCamera;
-    bool m_Visible;
+    public bool m_Visible { get; private set; }
 
     void Start()
     {

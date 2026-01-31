@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - CinemachineTarget
   - DontSelected
+  - spawn3
+  - spawn1
+  - spawn2
+  - spawn0
   layers:
   - Default
   - TransparentFX
