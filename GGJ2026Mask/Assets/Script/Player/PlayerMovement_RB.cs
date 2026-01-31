@@ -137,9 +137,6 @@ public class PlayerMovement_RB : MonoBehaviour
 		// 7) Animation
 		_animationManager.SetIsGrounded(_isGrounded);
 		_animationManager.PlayWalkAnimation(_rb.linearVelocity);
-
-		Debug.Log($"starter={_starterInputs?.move} raw={_moveInput}");
-		Debug.Log($"angVelY={_rb.angularVelocity.y}, vel={_rb.linearVelocity}");
 	}
 
 	private Vector2 GetEffectiveMoveInput()

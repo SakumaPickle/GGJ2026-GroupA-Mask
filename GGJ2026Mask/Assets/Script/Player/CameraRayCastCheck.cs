@@ -3,7 +3,10 @@ using UnityEngine.InputSystem;
 
 public class CameraRayCastCheck : MonoBehaviour
 {
+	[SerializeField] private Camera _playerCamera;
 	[SerializeField] private InputSystem_Actions _inputActions;
+
+	private GameObject _hitObject;
 
 	private void Awake()
 	{
@@ -11,29 +14,50 @@ public class CameraRayCastCheck : MonoBehaviour
 			_inputActions = new InputSystem_Actions();
 	}
 
+	private void Update()
+	{
+		CheckCollider();
+	}
+
 	private void OnEnable()
 	{
-		_inputActions.UI.Click.started += PointerDown;
-		_inputActions.UI.Enable();
+		_inputActions.Player.Interact.started += PointerDown;
+		_inputActions.Player.Interact.Enable();
 	}
 
 	private void OnDisable()
 	{
-		_inputActions.UI.Click.started -= PointerDown;
-		_inputActions.UI.Disable();
+		_inputActions.Player.Interact.started -= PointerDown;
+		_inputActions.Player.Interact.Disable();
+	}
+
+	private bool CheckCollider()
+	{
+		// Ray from player camera forward direction
+		var ray = new Ray(
+			_playerCamera.transform.position,
+			_playerCamera.transform.forward
+		);
+
+		// 一旦ヒットチェックする
+		if (Physics.Raycast(ray, out var hit, 100f))
+		{
+			_hitObject = hit.collider.transform.root.gameObject;
+			return true;
+		}
+
+		_hitObject = null;
+		return false;
 	}
 
 	private void PointerDown(InputAction.CallbackContext ctx)
 	{
-		var mousePosition = Mouse.current.position.ReadValue();
-		Debug.Log($"{mousePosition}");
-		var ray = Camera.main.ScreenPointToRay(mousePosition);
-		if (Physics.Raycast(ray, out var hit))
+		// ヒットしている状態で何かしらアクションできるようにする
+
+		if (_hitObject != null)
 		{
-			if (hit.collider.CompareTag("Enemy"))
-			{
-				Destroy(hit.collider.gameObject);
-			}
+			Destroy(_hitObject);
+			_hitObject = null;
 		}
 	}
 }
