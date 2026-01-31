@@ -43,6 +43,12 @@ public class CameraRayCastCheck : MonoBehaviour
 		if (Physics.Raycast(ray, out var hit, 100f))
 		{
 			_hitObject = hit.collider.transform.root.gameObject;
+
+			if (_hitObject.tag == "DontSelected")
+			{
+				return false;
+			}
+
 			return true;
 		}
 
