@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: SoundDatabase
   m_EditorClassIdentifier: Assembly-CSharp::SoundDatabase
   bgms:
-  - name: "\u30CE\u30B9\u30BF\u30EB\u30B8\u30A2"
+  - name: Nostalgia
     clip: {fileID: 8300000, guid: 4a40dc3f8538acd45bd97e0a378a5c1e, type: 3}
     volume: 1
     loop: 1
   ses:
-  - name: "\u6C7A\u5B9A"
+  - name: Decision
     clip: {fileID: 8300000, guid: 836318f5e7ecabe47917abe6e59bd1c3, type: 3}
     volume: 1
     loop: 0
-  - name: "\u6C7A\u5B9A"
+  - name: Cancel
     clip: {fileID: 8300000, guid: 2bf3f8c64c182674c86dfa1fed1d619d, type: 3}
     volume: 1
     loop: 0
