@@ -58,11 +58,6 @@ public class ThirdPersonCameraController : MonoBehaviour
 			return;
 		}
 
-		UpdatePinchZoom();
-
-		var zoomAxis = _wheelZoomAxis + _pinchZoomAxis;
-		ApplyZoom(zoomAxis);
-
 		var look = GetEffectiveLookInput();
 		var hasStarterLook =
 			_starterInputs != null &&
@@ -110,73 +105,5 @@ public class ThirdPersonCameraController : MonoBehaviour
 		}
 
 		return _lookInput;
-	}
-
-	private void ApplyZoom(float axis)
-	{
-		if (Mathf.Approximately(axis, 0f))
-		{
-			return;
-		}
-
-		_distance -= axis * _zoomSpeed * Time.deltaTime;
-		_distance = Mathf.Clamp(_distance, _minDistance, _maxDistance);
-	}
-
-	private void UpdatePinchZoom()
-	{
-		_pinchZoomAxis = 0f;
-
-		var touches = UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches;
-
-		if (IsAnyTouchOverUI())
-		{
-			_isPinching = false;
-			return;
-		}
-
-		if (touches.Count < 2)
-		{
-			_isPinching = false;
-			return;
-		}
-
-		var t0 = touches[0];
-		var t1 = touches[1];
-
-		var p0 = t0.screenPosition;
-		var p1 = t1.screenPosition;
-
-		float distance = Vector2.Distance(p0, p1);
-
-		if (!_isPinching)
-		{
-			_isPinching = true;
-			_prevPinchDistance = distance;
-			return;
-		}
-
-		float delta = distance - _prevPinchDistance;
-		_prevPinchDistance = distance;
-
-		_pinchZoomAxis = delta * 0.01f;
-	}
-
-	private bool IsAnyTouchOverUI()
-	{
-		if (EventSystem.current == null)
-		{
-			return false;
-		}
-
-		foreach (var t in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
-		{
-			if (EventSystem.current.IsPointerOverGameObject(t.touchId))
-			{
-				return true;
-			}
-		}
-
-		return false;
 	}
 }
