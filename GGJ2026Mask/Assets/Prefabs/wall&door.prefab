@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6204067704759880735}
   - component: {fileID: 8446953840985923392}
   - component: {fileID: 3073288728038161903}
+  - component: {fileID: 4309412608873750862}
   m_Layer: 0
   m_Name: door_ue
   m_TagString: Untagged
@@ -146,6 +147,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4309412608873750862
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853694726329161904}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &972008012950016550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,8 +291,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2085362649289272262, guid: 385de7e6f7f2d4bdf994de456e14dcb9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3394483604165547993}
   m_SourcePrefab: {fileID: 100100000, guid: 385de7e6f7f2d4bdf994de456e14dcb9, type: 3}
+--- !u!1 &847800660360087117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2085362649289272262, guid: 385de7e6f7f2d4bdf994de456e14dcb9, type: 3}
+  m_PrefabInstance: {fileID: 1671763941675232651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3394483604165547993
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847800660360087117}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &7789583005448973173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8874734536566458110, guid: 385de7e6f7f2d4bdf994de456e14dcb9, type: 3}

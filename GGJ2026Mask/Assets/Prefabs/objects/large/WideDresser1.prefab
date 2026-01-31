@@ -48,9 +48,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6156689181639957564, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4652399991633370061, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3316411561114469021, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1702666188762927461, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -738189832588226021, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -644650396315591060, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
       propertyPath: m_Name
       value: WideDresser1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727333984784943443, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719197917765640745, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600142744161743, guid: a79ae3add72b24849bf0d3453ebdfbf5, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

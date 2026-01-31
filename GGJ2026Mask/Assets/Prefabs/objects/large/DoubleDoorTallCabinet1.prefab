@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleDoorTallCabinet1
       objectReference: {fileID: 0}
+    - target: {fileID: 1291392700621724306, guid: cb3d921bf4da0d846b7f39b4f0751a21, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532153315478343507, guid: cb3d921bf4da0d846b7f39b4f0751a21, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477492187743482241, guid: cb3d921bf4da0d846b7f39b4f0751a21, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

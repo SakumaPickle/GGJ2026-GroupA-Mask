@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dumbell1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 5346b86a46a55fe468ffa6832c0cc0a5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glue1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: a12ed7eaec05a614da808b1e518e0905, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

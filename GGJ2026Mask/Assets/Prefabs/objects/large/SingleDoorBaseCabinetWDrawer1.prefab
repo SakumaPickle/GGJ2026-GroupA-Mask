@@ -48,9 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3946052934462158681, guid: 5a21e4a8cfdd9c248b0e890f73655586, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a21e4a8cfdd9c248b0e890f73655586, type: 3}
       propertyPath: m_Name
       value: SingleDoorBaseCabinetWDrawer1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964815990597705052, guid: 5a21e4a8cfdd9c248b0e890f73655586, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2452664979715905899, guid: 5a21e4a8cfdd9c248b0e890f73655586, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

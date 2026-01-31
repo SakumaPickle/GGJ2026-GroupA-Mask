@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxingGloves1
       objectReference: {fileID: 0}
+    - target: {fileID: 5301859786165666264, guid: 0e821f5cba55c534ab083932ce30b0ca, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651205170255644443, guid: 0e821f5cba55c534ab083932ce30b0ca, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

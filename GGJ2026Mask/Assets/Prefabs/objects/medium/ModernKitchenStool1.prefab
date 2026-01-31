@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernKitchenStool1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 03a738315c6714b46a7b6de4d03b23aa, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

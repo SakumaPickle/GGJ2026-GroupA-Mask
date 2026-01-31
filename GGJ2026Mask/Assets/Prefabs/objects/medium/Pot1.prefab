@@ -48,9 +48,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2258032245110057414, guid: 069e3ab3baa1a33439e588fa57ec9ea8, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 069e3ab3baa1a33439e588fa57ec9ea8, type: 3}
       propertyPath: m_Name
       value: Pot1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660948584931541141, guid: 069e3ab3baa1a33439e588fa57ec9ea8, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

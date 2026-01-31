@@ -48,6 +48,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2104100429319606831, guid: 96b65aa83b3729a4b92823dc83b8c476, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1769136547130329081, guid: 96b65aa83b3729a4b92823dc83b8c476, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1453135049819884596, guid: 96b65aa83b3729a4b92823dc83b8c476, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -203118888463744481, guid: 96b65aa83b3729a4b92823dc83b8c476, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 912398406526747825, guid: 96b65aa83b3729a4b92823dc83b8c476, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96b65aa83b3729a4b92823dc83b8c476, type: 3}
       propertyPath: m_Name
       value: TwoSeaterCouch1
