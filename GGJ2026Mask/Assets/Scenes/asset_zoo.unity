@@ -4549,6 +4549,7 @@ GameObject:
   - component: {fileID: 1355255949}
   - component: {fileID: 1355255948}
   - component: {fileID: 1355255947}
+  - component: {fileID: 1355255951}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -4650,6 +4651,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1355255951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355255946}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1363052519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7300,6 +7322,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 129684511344695660, guid: 8de1fa72442443d4aae9347920703484, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874134410608994215, guid: 8de1fa72442443d4aae9347920703484, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6397973347994610604, guid: 8de1fa72442443d4aae9347920703484, type: 3}
