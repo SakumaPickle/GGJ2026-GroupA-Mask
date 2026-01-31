@@ -24,15 +24,13 @@ public class SettingDialog : MonoBehaviour
 		}
 	}
 
-	public void OnClose()
+	public void OnClickCloseButton()
 	{
+		SoundManager.Instance.PlaySE(SoundManager.Se.Cancel);
 		PlayerPrefs.SetFloat("BGMVolume", _bgmSlider.normalizedValue);
 		PlayerPrefs.SetFloat("SEVolume", _seSlider.normalizedValue);
 		gameObject.SetActive(false);
 	}
 
-	public void OnClickSettingButton()
-	{
-		gameObject.SetActive(true);
-	}
+
 }
