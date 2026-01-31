@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time:'
+  m_text: Time:60
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3896,7 +3896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start!!
+  m_text: Finish!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5676,6 +5676,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1618546553082769010, guid: 8de1fa72442443d4aae9347920703484, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 401270776}
     - target: {fileID: 2068961554390876525, guid: 8de1fa72442443d4aae9347920703484, type: 3}
       propertyPath: cursorLocked
       value: 1
@@ -5700,6 +5704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThirdPersonSet
       objectReference: {fileID: 0}
+    - target: {fileID: 6725315415819259182, guid: 8de1fa72442443d4aae9347920703484, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 401270776}
     - target: {fileID: 6725315415819259182, guid: 8de1fa72442443d4aae9347920703484, type: 3}
       propertyPath: _stickYawSpeed
       value: 0.1

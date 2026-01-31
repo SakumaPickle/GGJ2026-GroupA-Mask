@@ -6,6 +6,8 @@ using UnityEngine.InputSystem.EnhancedTouch;
 
 public class ThirdPersonCameraController : MonoBehaviour
 {
+	[SerializeField] private Game _gameManager;
+
 	[SerializeField] private StarterAssetsInputs _starterInputs;
 	[SerializeField] private Transform _target;
 	[SerializeField] private float _distance = 5f;
@@ -60,7 +62,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 
 		var look = GetEffectiveLookInput();
 
-		if (!_isPinching)
+		if (_gameManager == null || (!_isPinching && _gameManager.IsPlaying))
 		{
 			float yawDelta = 0f;
 			float pitchDelta = 0f;

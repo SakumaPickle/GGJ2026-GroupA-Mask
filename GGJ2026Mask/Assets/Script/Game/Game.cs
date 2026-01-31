@@ -13,17 +13,18 @@ public class Game : MonoBehaviour
 	private bool _isFinish = false;
 	private bool _isInitialize = false;
 
+	public bool IsPlaying => _isInitialize && !_isFinish;
+
 	void Start()
 	{
 		// todo: WaitEnemyLoad
-
 		if (TransitFader.Instance != null)
 		{
 			TransitFader.Instance.FadeIn().Forget();
-			SoundManager.Instance.PlayBGM(SoundManager.Bgm.Nostalgia);
+			SoundManager.Instance.PlayBGM(SoundManager.Bgm.make_me_happy);
 		}
 
-		StartEffect().Forget();
+		StartEffectAsync().Forget();
 	}
 
 	void Update()
@@ -43,13 +44,13 @@ public class Game : MonoBehaviour
 
 		if (_isFinish)
 		{
-			TimeUp();
+			TimeUpAsync().Forget();
 		}
 
 
 	}
 
-	private async UniTask StartEffect()
+	private async UniTask StartEffectAsync()
 	{
 		await _startText.DOLocalMoveX(0, 1f).ToUniTask(cancellationToken: destroyCancellationToken);
 
@@ -60,11 +61,15 @@ public class Game : MonoBehaviour
 		_isInitialize = true;
 	}
 
-	private void TimeUp()
+	private async UniTask TimeUpAsync()
 	{
 		// タイムアップ演出作る
 
+		await _finishText.DOLocalMoveX(0, 1f).ToUniTask(cancellationToken: destroyCancellationToken);
 
+		await UniTask.WaitForSeconds(0.5f);
+
+		await _finishText.DOLocalMoveX(1000, 1f).ToUniTask(cancellationToken: destroyCancellationToken);
 
 	}
 

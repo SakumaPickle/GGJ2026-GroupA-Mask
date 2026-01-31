@@ -17,6 +17,18 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4a40dc3f8538acd45bd97e0a378a5c1e, type: 3}
     volume: 1
     loop: 1
+  - name: Random_Walker
+    clip: {fileID: 8300000, guid: 2ec695a94a14d1a42b33d3724fea86bc, type: 3}
+    volume: 1
+    loop: 1
+  - name: make_me_happy
+    clip: {fileID: 8300000, guid: c5a00b03ed995014ea1647390c833d1e, type: 3}
+    volume: 1
+    loop: 1
+  - name: Art_Break
+    clip: {fileID: 8300000, guid: 146fc0e2d5cb28646b7da477aec780ef, type: 3}
+    volume: 1
+    loop: 1
   ses:
   - name: Decision
     clip: {fileID: 8300000, guid: 836318f5e7ecabe47917abe6e59bd1c3, type: 3}
