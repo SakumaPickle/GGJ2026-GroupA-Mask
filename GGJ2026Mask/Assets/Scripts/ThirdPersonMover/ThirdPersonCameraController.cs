@@ -12,21 +12,24 @@ public class ThirdPersonCameraController : MonoBehaviour
 	[SerializeField] private float _minDistance = 3f;
 	[SerializeField] private float _maxDistance = 10f;
 	[SerializeField] private float _gamePadYawSpeed = 360f;
-	[SerializeField] private float _stickYawSpeed = 180f;
+	[SerializeField] private float _gamePadPitchSpeed = 100f;
+	[SerializeField] private float _stickYawSpeed = 10f;
+	[SerializeField] private float _stickPitchSpeed = 10f;
+
 
 	[SerializeField] private float _zoomSpeed = 15f;
 	[SerializeField] private float _fixedPitch = 45f;
+	[SerializeField] private float _minPitch = -40f;
+	[SerializeField] private float _maxPitch = 70f;
+
 	[SerializeField] private Vector3 _targetOffset = new Vector3(0f, 1.5f, 0f);
 
 	private InputSystem_Actions _input;
 	private Vector2 _lookInput;
 	private float _yaw;
-
-	private float _wheelZoomAxis;
-	private float _pinchZoomAxis;
+	private float _pitch;
 
 	private bool _isPinching;
-	private float _prevPinchDistance;
 
 	private void Awake()
 	{
@@ -34,9 +37,6 @@ public class ThirdPersonCameraController : MonoBehaviour
 
 		_input.Player.Look.performed += ctx => _lookInput = ctx.ReadValue<Vector2>();
 		_input.Player.Look.canceled += ctx => _lookInput = Vector2.zero;
-
-		_input.Player.CameraZoom.performed += ctx => _wheelZoomAxis = ctx.ReadValue<float>();
-		_input.Player.CameraZoom.canceled += ctx => _wheelZoomAxis = 0f;
 	}
 
 	private void OnEnable()
@@ -65,31 +65,34 @@ public class ThirdPersonCameraController : MonoBehaviour
 
 		if (!_isPinching)
 		{
-			var yawDelta = 0f;
+			float yawDelta = 0f;
+			float pitchDelta = 0f;
 
+			// 🎮 Gamepad
 			if (Gamepad.current != null)
 			{
 				var rightStick = Gamepad.current.rightStick.ReadValue();
 				if (rightStick.sqrMagnitude > 0.01f)
 				{
 					yawDelta = rightStick.x * _gamePadYawSpeed * Time.deltaTime;
+					pitchDelta = -rightStick.y * _gamePadPitchSpeed * Time.deltaTime;
 				}
-
-				_yaw += yawDelta;
 			}
 
-			if ((hasStarterLook) && look.sqrMagnitude > 0.0001f)
+			// 🖱 / スティック（StarterAssets / Touch / Mouse）
+			if (hasStarterLook && look.sqrMagnitude > 0.0001f)
 			{
-				if (hasStarterLook)
-				{
-					yawDelta = look.x * _stickYawSpeed * Time.deltaTime;
-				}
-
-				_yaw += yawDelta;
+				yawDelta = look.x * _stickYawSpeed * Time.deltaTime;
+				pitchDelta = -look.y * _stickPitchSpeed * Time.deltaTime;
 			}
+
+			_yaw += yawDelta;
+			_pitch += pitchDelta;
+			_pitch = Mathf.Clamp(_pitch, _minPitch, _maxPitch);
 		}
 
-		var rot = Quaternion.Euler(_fixedPitch, _yaw, 0f);
+		var rot = Quaternion.Euler(_pitch, _yaw, 0f);
+
 		var focusPos = _target.position + _targetOffset;
 		var camPos = focusPos + rot * new Vector3(0f, 0f, -_distance);
 
