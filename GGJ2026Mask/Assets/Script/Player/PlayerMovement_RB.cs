@@ -40,6 +40,9 @@ public class PlayerMovement_RB : MonoBehaviour
 	[SerializeField] private float _linearDragGround = 0f;     // Optional: set via Inspector if you want
 	[SerializeField] private float _linearDragAir = 0f;        // Optional: set via Inspector if you want
 
+	[Header("Input Deadzone")]
+	[SerializeField, Range(0f, 0.5f)] private float _moveDeadzone = 0.08f;
+
 	private Rigidbody _rb;
 	private Collider _col;
 
@@ -89,7 +92,13 @@ public class PlayerMovement_RB : MonoBehaviour
 		// Drag switching (optional)
 		_rb.linearDamping = _isGrounded ? _linearDragGround : _linearDragAir;
 
+
+
 		Vector2 moveInput = GetEffectiveMoveInput();
+
+		bool hasMoveInput = moveInput.sqrMagnitude > (_moveDeadzone * _moveDeadzone);
+		if (!hasMoveInput)
+			moveInput = Vector2.zero;
 
 		// 1) Desired move direction (camera-relative)
 		Vector3 moveDir = GetMoveDirectionFromInput(moveInput);
@@ -111,11 +120,26 @@ public class PlayerMovement_RB : MonoBehaviour
 		ApplyGravityAndSnap();
 
 		// 6) Rotation
-		HandleRotation(moveDir);
+		if (hasMoveInput)
+		{
+			HandleRotation(moveDir);
+		}
+
+		// Stop unwanted physics spin when there is no rotation intent.
+		// This prevents "keep spinning" even when move inputs are zero.
+		if (!hasMoveInput)
+		{
+			var av = _rb.angularVelocity;
+			av.y = 0f;
+			_rb.angularVelocity = av;
+		}
 
 		// 7) Animation
 		_animationManager.SetIsGrounded(_isGrounded);
 		_animationManager.PlayWalkAnimation(_rb.linearVelocity);
+
+		Debug.Log($"starter={_starterInputs?.move} raw={_moveInput}");
+		Debug.Log($"angVelY={_rb.angularVelocity.y}, vel={_rb.linearVelocity}");
 	}
 
 	private Vector2 GetEffectiveMoveInput()
@@ -216,6 +240,9 @@ public class PlayerMovement_RB : MonoBehaviour
 
 		Vector3 targetForward = moveDirection;
 		targetForward.y = 0f;
+
+		if (targetForward.sqrMagnitude < 0.0001f)
+			return;
 		targetForward.Normalize();
 
 		Quaternion targetRot = Quaternion.LookRotation(targetForward, Vector3.up);
