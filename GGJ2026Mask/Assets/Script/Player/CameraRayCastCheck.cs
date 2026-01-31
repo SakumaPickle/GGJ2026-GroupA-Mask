@@ -39,13 +39,21 @@ public class CameraRayCastCheck : MonoBehaviour
 			_playerCamera.transform.forward
 		);
 
-		// 一旦ヒットチェックする
+		// Raycast
 		if (Physics.Raycast(ray, out var hit, 100f))
 		{
-			_hitObject = hit.collider.transform.root.gameObject;
-
-			if (_hitObject.tag == "DontSelected")
+			var marker = hit.collider.GetComponentInParent<DespawnEnemyMarker>();
+			if (marker == null)
 			{
+				_hitObject = null;
+				return false;
+			}
+
+			_hitObject = marker.gameObject;
+
+			if (_hitObject.CompareTag("DontSelected"))
+			{
+				_hitObject = null;
 				return false;
 			}
 
