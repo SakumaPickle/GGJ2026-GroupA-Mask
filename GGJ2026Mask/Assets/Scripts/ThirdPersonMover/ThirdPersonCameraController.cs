@@ -83,7 +83,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 			if (hasStarterLook && look.sqrMagnitude > 0.0001f)
 			{
 				yawDelta = look.x * _stickYawSpeed * Time.deltaTime;
-				pitchDelta = -look.y * _stickPitchSpeed * Time.deltaTime;
+				pitchDelta = look.y * _stickPitchSpeed * Time.deltaTime;
 			}
 
 			_yaw += yawDelta;
