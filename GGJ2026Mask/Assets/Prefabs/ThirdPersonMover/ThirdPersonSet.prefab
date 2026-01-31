@@ -281,8 +281,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2068961554390876525}
     - target: {fileID: 927634260680522393, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: _stickYawSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 927634260680522393, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: _stickPitchSpeed
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409498, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_Name
