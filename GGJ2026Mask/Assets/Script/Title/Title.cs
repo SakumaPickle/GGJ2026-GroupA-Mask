@@ -10,6 +10,7 @@ public class Title : MonoBehaviour
 
 	public void OnClickGameStart()
 	{
+		SoundManager.Instance.PlaySE(SoundManager.Se.Decision);
 		TransitFader.Instance.FadeOutAsync("GameScene").Forget();
 	}
 }

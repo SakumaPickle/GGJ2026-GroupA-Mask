@@ -6,6 +6,7 @@ public class Game : MonoBehaviour
 	void Start()
 	{
 		TransitFader.Instance.FadeIn().Forget();
+		SoundManager.Instance.PlayBGM(SoundManager.Bgm.Nostalgia);
 	}
 
 	void Update()
@@ -16,6 +17,8 @@ public class Game : MonoBehaviour
 	// 仮でボタン押下でリザルト画面に遷移
 	public void OnClickResult()
 	{
+		SoundManager.Instance.StopBGM();
+		SoundManager.Instance.PlaySE(SoundManager.Se.Decision);
 		TransitFader.Instance.FadeOutAsync("ResultScene").Forget();
 	}
 }

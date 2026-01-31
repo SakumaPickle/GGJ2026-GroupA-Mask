@@ -16,6 +16,7 @@ public class Result : MonoBehaviour
 
 	public void OnClickNextButton()
 	{
+		SoundManager.Instance.PlaySE(SoundManager.Se.Cancel);	
 		TransitFader.Instance.FadeOutAsync("TitleScene").Forget();
 	}
 }
