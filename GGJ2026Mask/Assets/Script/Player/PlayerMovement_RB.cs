@@ -274,6 +274,9 @@ public class PlayerMovement_RB : MonoBehaviour
 
 	public void OnJumpStarted(InputAction.CallbackContext ctx)
 	{
+		// dontjump wait fix
+		return;
+
 		if (_jumpCount >= _maxJumpCount)
 			return;
 
