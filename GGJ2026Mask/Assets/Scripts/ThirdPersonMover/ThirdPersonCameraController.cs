@@ -55,14 +55,14 @@ public class ThirdPersonCameraController : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		if (_target == null || _gameManager == null)
+		if (_target == null)
 		{
 			return;
 		}
 
 		var look = GetEffectiveLookInput();
 
-		if (!_isPinching && _gameManager.IsPlaying)
+		if (_gameManager == null || (!_isPinching && _gameManager.IsPlaying))
 		{
 			float yawDelta = 0f;
 			float pitchDelta = 0f;
