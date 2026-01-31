@@ -6,7 +6,7 @@ public class Game : MonoBehaviour
 	void Start()
 	{
 		TransitFader.Instance.FadeIn().Forget();
-		SoundManager.Instance.PlayBGM(SoundManager.Bgm.Nostalgia);
+		SoundManager.Instance.PlayBGM(SoundManager.Bgm.make_me_happy);
 	}
 
 	void Update()

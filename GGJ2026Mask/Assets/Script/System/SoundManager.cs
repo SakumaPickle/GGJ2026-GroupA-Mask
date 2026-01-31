@@ -7,6 +7,9 @@ public class SoundManager : MonoBehaviour
 	public enum Bgm
 	{
 		Nostalgia,
+		Random_Walker,
+		make_me_happy,
+		Art_Break,
 	}
 
 	public enum Se
@@ -81,11 +84,17 @@ public class SoundManager : MonoBehaviour
 
 	public void SetBGMVolume(float value)
 	{
-		audioMixer.SetFloat("BGMVolume", Mathf.Log10(value) * 20);
+		audioMixer.SetFloat("BGMVolume", LinearToDecibel(value));
 	}
 
 	public void SetSEVolume(float value)
 	{
-		audioMixer.SetFloat("SEVolume", Mathf.Log10(value) * 20);
+		audioMixer.SetFloat("SEVolume", LinearToDecibel(value));
 	}
+
+	private float LinearToDecibel(float linear)
+	{
+		return linear <= 0f ? -80f : Mathf.Log10(linear) * 20;
+	}
+
 }
