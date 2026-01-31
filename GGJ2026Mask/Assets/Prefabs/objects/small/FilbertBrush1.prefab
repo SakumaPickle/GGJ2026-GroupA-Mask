@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FilbertBrush1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 9ca4668f1b19bce49b98758f7cf1a2cd, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

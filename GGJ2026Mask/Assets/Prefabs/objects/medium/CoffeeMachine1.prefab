@@ -52,6 +52,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeMachine1
       objectReference: {fileID: 0}
+    - target: {fileID: 3358802946820220612, guid: 67315c000ffe32447a2e80c8f1041a34, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692460086216603651, guid: 67315c000ffe32447a2e80c8f1041a34, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920521752340536928, guid: 67315c000ffe32447a2e80c8f1041a34, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979375220739367570, guid: 67315c000ffe32447a2e80c8f1041a34, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

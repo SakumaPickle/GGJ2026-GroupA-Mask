@@ -48,9 +48,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2629032161281521918, guid: 9c780552f3b3cf44496873a287f0c992, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c780552f3b3cf44496873a287f0c992, type: 3}
       propertyPath: m_Name
       value: SmallWardrobe1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046609214927656196, guid: 9c780552f3b3cf44496873a287f0c992, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524784468495941634, guid: 9c780552f3b3cf44496873a287f0c992, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599417591822556217, guid: 9c780552f3b3cf44496873a287f0c992, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833508081065050366, guid: 9c780552f3b3cf44496873a287f0c992, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

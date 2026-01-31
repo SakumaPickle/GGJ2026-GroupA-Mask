@@ -48,9 +48,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1825982014055709645, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
       propertyPath: m_Name
       value: OvenSolo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224562922728808, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419106413050759453, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264995494020683098, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346500881454962182, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695935984795692697, guid: 20872dc26d1ac4e4ebd7fc7b733fb124, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

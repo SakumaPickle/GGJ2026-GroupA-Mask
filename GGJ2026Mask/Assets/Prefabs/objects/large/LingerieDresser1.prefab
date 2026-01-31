@@ -48,9 +48,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6281098800584133868, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3852029318231834899, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -960273295286005851, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 116335345144152062, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848923753512444251, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
       propertyPath: m_Name
       value: LingerieDresser1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522931490142515804, guid: 2e866ad1810a4e04cabca58c2c8c1334, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

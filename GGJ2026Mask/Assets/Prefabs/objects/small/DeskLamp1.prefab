@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeskLamp1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: fe506e4efce5fe445a49b6bd9a6f9fab, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

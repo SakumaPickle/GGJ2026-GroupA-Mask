@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Milkjar1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 4470bd8da473b1c4b8623193f668dff3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

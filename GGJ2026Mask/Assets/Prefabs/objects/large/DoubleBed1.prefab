@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9180908826857804802, guid: 97de4d939e6c2a9468cabcc2fde639e1, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97de4d939e6c2a9468cabcc2fde639e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48,9 +52,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3521110335503676328, guid: 97de4d939e6c2a9468cabcc2fde639e1, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 97de4d939e6c2a9468cabcc2fde639e1, type: 3}
       propertyPath: m_Name
       value: DoubleBed1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674213353611138457, guid: 97de4d939e6c2a9468cabcc2fde639e1, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383361759786724228, guid: 97de4d939e6c2a9468cabcc2fde639e1, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

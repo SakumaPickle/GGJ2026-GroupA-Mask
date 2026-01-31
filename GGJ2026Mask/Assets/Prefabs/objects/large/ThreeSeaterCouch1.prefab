@@ -48,9 +48,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2655909475286813537, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640742622908651249, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
       propertyPath: m_Name
       value: ThreeSeaterCouch1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023924503108870657, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345903329165174737, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912848989268972659, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978928530304796933, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384333739758344816, guid: 2c5435d5e106b1a4f9a5b924b9be302e, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

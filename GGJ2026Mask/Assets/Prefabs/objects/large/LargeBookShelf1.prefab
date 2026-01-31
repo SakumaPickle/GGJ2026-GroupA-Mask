@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargeBookShelf1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 9715cc9679ef1584aaab2023f4c5deac, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
