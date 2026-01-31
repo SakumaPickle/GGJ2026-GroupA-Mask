@@ -55,7 +55,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		if (_target == null)
+		if (_target == null || _gameManager == null)
 		{
 			return;
 		}

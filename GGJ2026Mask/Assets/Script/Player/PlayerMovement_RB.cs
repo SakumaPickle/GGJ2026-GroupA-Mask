@@ -89,7 +89,7 @@ public class PlayerMovement_RB : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (!_gameManager.IsPlaying)
+		if (_gameManager == null || !_gameManager.IsPlaying)
 		{
 			ApplyPlanarControl(Vector3.zero);
 			var av = _rb.angularVelocity;
