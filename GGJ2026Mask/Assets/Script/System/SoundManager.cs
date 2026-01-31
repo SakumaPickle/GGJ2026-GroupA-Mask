@@ -32,7 +32,6 @@ public class SoundManager : MonoBehaviour
 		}
 
 		Instance = this;
-		DontDestroyOnLoad(gameObject);
 
 		bgmSource = gameObject.AddComponent<AudioSource>();
 		seSource = gameObject.AddComponent<AudioSource>();
