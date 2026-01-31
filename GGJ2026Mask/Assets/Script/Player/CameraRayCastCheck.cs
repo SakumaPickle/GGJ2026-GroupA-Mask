@@ -9,6 +9,7 @@ public class CameraRayCastCheck : MonoBehaviour
 	[SerializeField] private InputSystem_Actions _inputActions;
 
 	private GameObject _hitObject;
+	private bool _isTouchUI;
 
 	private void Awake()
 	{
@@ -19,6 +20,7 @@ public class CameraRayCastCheck : MonoBehaviour
 	private void Update()
 	{
 		CheckCollider();
+		_isTouchUI = IsAnyTouchOverUI();
 	}
 
 	private void OnEnable()
@@ -76,7 +78,7 @@ public class CameraRayCastCheck : MonoBehaviour
 			return;
 
 		// uitouch DontDestroy
-		if (IsAnyTouchOverUI(ctx))
+		if (_isTouchUI)
 		{
 			return;
 		}
@@ -85,17 +87,11 @@ public class CameraRayCastCheck : MonoBehaviour
 		_hitObject = null;
 	}
 
-	private bool IsAnyTouchOverUI(InputAction.CallbackContext ctx)
+	private bool IsAnyTouchOverUI()
 	{
 		if (EventSystem.current == null)
 		{
 			return false;
-		}
-
-		// Mouse / Pen: pointerId = -1 is the common EventSystem pointer id
-		if (ctx.control != null && ctx.control.device is Pointer)
-		{
-			return EventSystem.current.IsPointerOverGameObject();
 		}
 
 		foreach (var t in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
