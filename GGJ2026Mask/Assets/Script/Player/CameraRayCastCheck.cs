@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class CameraRayCastCheck : MonoBehaviour
 {
@@ -23,12 +25,14 @@ public class CameraRayCastCheck : MonoBehaviour
 	{
 		_inputActions.Player.Interact.started += PointerDown;
 		_inputActions.Player.Interact.Enable();
+		EnhancedTouchSupport.Enable();
 	}
 
 	private void OnDisable()
 	{
 		_inputActions.Player.Interact.started -= PointerDown;
 		_inputActions.Player.Interact.Disable();
+		EnhancedTouchSupport.Disable();
 	}
 
 	private bool CheckCollider()
@@ -68,10 +72,40 @@ public class CameraRayCastCheck : MonoBehaviour
 	{
 		// ヒットしている状態で何かしらアクションできるようにする
 
-		if (_hitObject != null)
+		if (_hitObject == null)
+			return;
+
+		// uitouch DontDestroy
+		if (IsAnyTouchOverUI(ctx))
 		{
-			Destroy(_hitObject);
-			_hitObject = null;
+			return;
 		}
+
+		Destroy(_hitObject);
+		_hitObject = null;
+	}
+
+	private bool IsAnyTouchOverUI(InputAction.CallbackContext ctx)
+	{
+		if (EventSystem.current == null)
+		{
+			return false;
+		}
+
+		// Mouse / Pen: pointerId = -1 is the common EventSystem pointer id
+		if (ctx.control != null && ctx.control.device is Pointer)
+		{
+			return EventSystem.current.IsPointerOverGameObject();
+		}
+
+		foreach (var t in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
+		{
+			if (EventSystem.current.IsPointerOverGameObject(t.touchId))
+			{
+				return true;
+			}
+		}
+
+		return false;
 	}
 }
