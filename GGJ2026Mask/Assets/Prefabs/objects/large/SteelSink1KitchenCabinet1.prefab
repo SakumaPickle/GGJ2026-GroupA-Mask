@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9048732827363327226, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48,9 +52,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6563011937466820966, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
       propertyPath: m_Name
       value: SteelSink1KitchenCabinet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108287871637628498, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706040365677093797, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719821435649297445, guid: beb4131b05cf6964bb096fb6f8209d7a, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

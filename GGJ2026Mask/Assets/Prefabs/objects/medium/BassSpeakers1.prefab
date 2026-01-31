@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BassSpeakers1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 65f67c0c8a3e4244d9f245e219328821, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

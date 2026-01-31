@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guitar1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 252f2e413f5f56b4da4c2b990811f978, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

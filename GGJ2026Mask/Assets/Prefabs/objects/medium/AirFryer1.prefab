@@ -48,9 +48,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7633298635599937362, guid: 8a97a23f92dc75f488602ab94f266b99, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -862331167136147643, guid: 8a97a23f92dc75f488602ab94f266b99, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a97a23f92dc75f488602ab94f266b99, type: 3}
       propertyPath: m_Name
       value: AirFryer1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115188404837571315, guid: 8a97a23f92dc75f488602ab94f266b99, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723339309328592173, guid: 8a97a23f92dc75f488602ab94f266b99, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

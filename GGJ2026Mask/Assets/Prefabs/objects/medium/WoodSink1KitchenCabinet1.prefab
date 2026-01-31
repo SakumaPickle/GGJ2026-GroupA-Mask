@@ -48,9 +48,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8079057877099162331, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8045735130500643885, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5921296224460300419, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5201648684049765714, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4319777108654825916, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
       propertyPath: m_Name
       value: WoodSink1KitchenCabinet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184102579714169737, guid: cfe5bec26c9f1d84e8ae1dc5f9e2c25b, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

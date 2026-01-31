@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6454044352032176595, guid: dfec22cf0eb91084ebd2859aba1a8ad1, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -386394439458907373, guid: dfec22cf0eb91084ebd2859aba1a8ad1, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dfec22cf0eb91084ebd2859aba1a8ad1, type: 3}
       propertyPath: m_Name
       value: SingleDoorUpperCabinet1

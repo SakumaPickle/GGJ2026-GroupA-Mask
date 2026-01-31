@@ -48,9 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6948111495870118525, guid: 7eebbb3332086634a97bf835a9b4e1ea, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2116616774294939913, guid: 7eebbb3332086634a97bf835a9b4e1ea, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7eebbb3332086634a97bf835a9b4e1ea, type: 3}
       propertyPath: m_Name
       value: WoodArmChair1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871688810573400660, guid: 7eebbb3332086634a97bf835a9b4e1ea, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

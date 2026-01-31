@@ -48,9 +48,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7193945894604244860, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 760967535312084881, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
       propertyPath: m_Name
       value: MediumWardrobe1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283015844751600144, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970942823689857893, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502228572141297880, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729669801207242964, guid: d2b9986e1a54a6a47b5aeaf8f73fb39f, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

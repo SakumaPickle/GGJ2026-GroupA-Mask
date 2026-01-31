@@ -48,9 +48,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7055340577363443236, guid: 23f86575bfb533648b992a9039be9e59, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 75245895360810507, guid: 23f86575bfb533648b992a9039be9e59, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487666103756481214, guid: 23f86575bfb533648b992a9039be9e59, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 23f86575bfb533648b992a9039be9e59, type: 3}
       propertyPath: m_Name
       value: Blender1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238498418075133350, guid: 23f86575bfb533648b992a9039be9e59, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430936557197533521, guid: 23f86575bfb533648b992a9039be9e59, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

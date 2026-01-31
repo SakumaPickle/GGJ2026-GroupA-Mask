@@ -48,9 +48,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4697660629677273271, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1928644957938334577, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1188354022240101605, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 588213282240227027, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
       propertyPath: m_Name
       value: FrenchFridge1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611542294962453523, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130671381061075114, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910450947148552777, guid: e4ac404020dbed14bb602b6c4c903f81, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

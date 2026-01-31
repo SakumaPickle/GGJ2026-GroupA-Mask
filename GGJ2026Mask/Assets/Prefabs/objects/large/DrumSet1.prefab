@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrumSet1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: e43aa4b1a9bd4b94d998015ce6f1bf65, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

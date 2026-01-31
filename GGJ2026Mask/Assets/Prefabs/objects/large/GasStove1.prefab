@@ -48,9 +48,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7319521586429890029, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7058135808403580441, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2559062421943102739, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1011976655371085245, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
       propertyPath: m_Name
       value: GasStove1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690684821066341677, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961635522867825115, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518046436591385604, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725583762411713854, guid: f98cfd1a9b0710e4e8e67cccf18c2bf3, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

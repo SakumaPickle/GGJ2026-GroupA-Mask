@@ -48,9 +48,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7994736054349545737, guid: 08c7b58759b58184fa0a423e2f4c9ec5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -341015664929893463, guid: 08c7b58759b58184fa0a423e2f4c9ec5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 330945514519101144, guid: 08c7b58759b58184fa0a423e2f4c9ec5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08c7b58759b58184fa0a423e2f4c9ec5, type: 3}
       propertyPath: m_Name
       value: MarbleSink1KitchenCabinet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399593626358909190, guid: 08c7b58759b58184fa0a423e2f4c9ec5, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028238226003648551, guid: 08c7b58759b58184fa0a423e2f4c9ec5, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
