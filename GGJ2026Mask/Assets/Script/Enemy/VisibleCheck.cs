@@ -30,7 +30,6 @@ public class VisibleCheck : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             // Check if the first object hit is the target object
-            print(hit.collider.name);
             if (hit.transform == transform)
             {
                 return false; // Visible and unobstructed
