@@ -6,6 +6,8 @@ using UnityEngine.InputSystem.EnhancedTouch;
 
 public class ThirdPersonCameraController : MonoBehaviour
 {
+	[SerializeField] private Game _gameManager;
+
 	[SerializeField] private StarterAssetsInputs _starterInputs;
 	[SerializeField] private Transform _target;
 	[SerializeField] private float _distance = 5f;
@@ -13,8 +15,8 @@ public class ThirdPersonCameraController : MonoBehaviour
 	[SerializeField] private float _maxDistance = 10f;
 	[SerializeField] private float _gamePadYawSpeed = 360f;
 	[SerializeField] private float _gamePadPitchSpeed = 100f;
-	[SerializeField] private float _stickYawSpeed = 10f;
-	[SerializeField] private float _stickPitchSpeed = 10f;
+	[SerializeField] private float _stickYawSpeed = 1f;
+	[SerializeField] private float _stickPitchSpeed = 1f;
 
 
 	[SerializeField] private float _zoomSpeed = 15f;
@@ -59,31 +61,37 @@ public class ThirdPersonCameraController : MonoBehaviour
 		}
 
 		var look = GetEffectiveLookInput();
-		var hasStarterLook =
-			_starterInputs != null &&
-			_starterInputs.look.sqrMagnitude > 0.001f;
 
-		if (!_isPinching)
+		if (_gameManager == null || (!_isPinching && _gameManager.IsPlaying))
 		{
 			float yawDelta = 0f;
 			float pitchDelta = 0f;
 
-			// 🎮 Gamepad
+			// ---- PAD branch ----
+			bool padHasInput = false;
 			if (Gamepad.current != null)
 			{
-				var rightStick = Gamepad.current.rightStick.ReadValue();
-				if (rightStick.sqrMagnitude > 0.01f)
+				var rs = Gamepad.current.rightStick.ReadValue();
+				if (rs.sqrMagnitude > 0.01f)
 				{
-					yawDelta = rightStick.x * _gamePadYawSpeed * Time.deltaTime;
-					pitchDelta = -rightStick.y * _gamePadPitchSpeed * Time.deltaTime;
+					padHasInput = true;
+					yawDelta = rs.x * _gamePadYawSpeed * Time.deltaTime;
+					pitchDelta = -rs.y * _gamePadPitchSpeed * Time.deltaTime;
 				}
 			}
 
-			// 🖱 / スティック（StarterAssets / Touch / Mouse）
-			if (hasStarterLook && look.sqrMagnitude > 0.0001f)
+			// ---- Mouse / Others branch ----
+			// Only use look input if PAD is not actively controlling camera this frame
+			if (!padHasInput)
 			{
-				yawDelta = look.x * _stickYawSpeed * Time.deltaTime;
-				pitchDelta = look.y * _stickPitchSpeed * Time.deltaTime;
+				// If this look comes from mouse delta, you may NOT want deltaTime.
+				// StarterAssets.look is usually already "delta-like" for mouse.
+				if (look.sqrMagnitude > 0.0001f)
+				{
+					// Mouse/Touch sensitivity (tweak separately)
+					yawDelta = look.x * _stickYawSpeed;
+					pitchDelta = -look.y * _stickPitchSpeed;
+				}
 			}
 
 			_yaw += yawDelta;

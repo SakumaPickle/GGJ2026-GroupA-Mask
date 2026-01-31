@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class CameraRayCastCheck : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class CameraRayCastCheck : MonoBehaviour
 	[SerializeField] private InputSystem_Actions _inputActions;
 
 	private GameObject _hitObject;
+	private bool _isTouchUI;
 
 	private void Awake()
 	{
@@ -17,18 +20,21 @@ public class CameraRayCastCheck : MonoBehaviour
 	private void Update()
 	{
 		CheckCollider();
+		_isTouchUI = IsAnyTouchOverUI();
 	}
 
 	private void OnEnable()
 	{
 		_inputActions.Player.Interact.started += PointerDown;
 		_inputActions.Player.Interact.Enable();
+		EnhancedTouchSupport.Enable();
 	}
 
 	private void OnDisable()
 	{
 		_inputActions.Player.Interact.started -= PointerDown;
 		_inputActions.Player.Interact.Disable();
+		EnhancedTouchSupport.Disable();
 	}
 
 	private bool CheckCollider()
@@ -68,10 +74,34 @@ public class CameraRayCastCheck : MonoBehaviour
 	{
 		// ヒットしている状態で何かしらアクションできるようにする
 
-		if (_hitObject != null)
+		if (_hitObject == null)
+			return;
+
+		// uitouch DontDestroy
+		if (_isTouchUI)
 		{
-			Destroy(_hitObject);
-			_hitObject = null;
+			return;
 		}
+
+		Destroy(_hitObject);
+		_hitObject = null;
+	}
+
+	private bool IsAnyTouchOverUI()
+	{
+		if (EventSystem.current == null)
+		{
+			return false;
+		}
+
+		foreach (var t in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
+		{
+			if (EventSystem.current.IsPointerOverGameObject(t.touchId))
+			{
+				return true;
+			}
+		}
+
+		return false;
 	}
 }

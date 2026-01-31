@@ -13,6 +13,6 @@ public class Title : MonoBehaviour
 	{
 		SoundManager.Instance.StopBGM();
 		SoundManager.Instance.PlaySE(SoundManager.Se.Decision);
-		TransitFader.Instance.FadeOutAsync("GameScene").Forget();
+		TransitFader.Instance.FadeOutAsync("TestScene").Forget();
 	}
 }
