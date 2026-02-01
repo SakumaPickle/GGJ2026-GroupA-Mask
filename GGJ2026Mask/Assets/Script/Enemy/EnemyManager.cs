@@ -7,8 +7,13 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private GameObject[] prefabs;
 	private Dictionary<int, GameObject[]> spawns = new Dictionary<int, GameObject[]>();
 
+	private const int ENEMY_MAX_COUNT = 4;
 	public int RemineEnemyCount => EnemyTracker.Count;
+	public int EnemyMaxCount => ENEMY_MAX_COUNT;
+	public bool IsInitialize => _isInitialize;
+
 	private Dictionary<GameObject, int> EnemyTracker = new Dictionary<GameObject, int>();
+	private bool _isInitialize;
 
 	void Start()
 	{
@@ -23,6 +28,8 @@ public class EnemyManager : MonoBehaviour
 			enemy.AddComponent<VisibleCheck>();
 			EnemyTracker[enemy] = i;
 		}
+
+		_isInitialize = true;
 	}
 
 	public bool moveEnemy(GameObject enemy)

@@ -9,6 +9,8 @@ public class Game : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI _timeText;
 	[SerializeField] private Transform _startText;
 	[SerializeField] private Transform _finishText;
+	[SerializeField] private EnemyManager _enemyManager;
+	[SerializeField] private TextMeshProUGUI _remineEnemyText;
 
 	private bool _isFinish = false;
 	private bool _isInitialize = false;
@@ -17,14 +19,7 @@ public class Game : MonoBehaviour
 
 	void Start()
 	{
-		// todo: WaitEnemyLoad
-		if (TransitFader.Instance != null)
-		{
-			TransitFader.Instance.FadeIn().Forget();
-			SoundManager.Instance.PlayBGM(SoundManager.Bgm.make_me_happy);
-		}
-
-		StartEffectAsync().Forget();
+		EnemyLoadWaitFadeAsync().Forget();
 	}
 
 	void Update()
@@ -40,12 +35,27 @@ public class Game : MonoBehaviour
 			_timeText.text = $"Time:{_gameTime:F0}";
 		}
 
-		_isFinish = _gameTime <= 0;
+		_isFinish = _gameTime <= 0 || _enemyManager.RemineEnemyCount <= 0;
+
+		_remineEnemyText.text = $"Enemy:{_enemyManager.RemineEnemyCount}/{_enemyManager.EnemyMaxCount}";
 
 		if (_isFinish)
 		{
-			TimeUpAsync().Forget();
+			FinishAsync().Forget();
 		}
+	}
+
+	private async UniTask EnemyLoadWaitFadeAsync()
+	{
+		await UniTask.WaitUntil(() => _enemyManager.IsInitialize);
+
+		if (TransitFader.Instance != null)
+		{
+			TransitFader.Instance.FadeIn().Forget();
+			SoundManager.Instance.PlayBGM(SoundManager.Bgm.make_me_happy);
+		}
+
+		await StartEffectAsync();
 	}
 
 	private async UniTask StartEffectAsync()
@@ -59,10 +69,8 @@ public class Game : MonoBehaviour
 		_isInitialize = true;
 	}
 
-	private async UniTask TimeUpAsync()
+	private async UniTask FinishAsync()
 	{
-		// タイムアップ演出作る
-
 		await _finishText.DOLocalMoveX(0, 1f).ToUniTask(cancellationToken: destroyCancellationToken);
 
 		await UniTask.WaitForSeconds(0.5f);
