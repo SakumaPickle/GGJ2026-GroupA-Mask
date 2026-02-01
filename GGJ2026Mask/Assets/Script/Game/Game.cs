@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using NUnit.Framework.Internal;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class Game : MonoBehaviour
 	[SerializeField] private Transform _finishText;
 	[SerializeField] private EnemyManager _enemyManager;
 	[SerializeField] private TextMeshProUGUI _remineEnemyText;
+	[SerializeField] private Result _result;
 
 	private bool _isFinish = false;
 	private bool _isInitialize = false;
@@ -77,13 +79,10 @@ public class Game : MonoBehaviour
 
 		await _finishText.DOLocalMoveX(1000, 1f).ToUniTask(cancellationToken: destroyCancellationToken);
 
+		_result.SetResult(_enemyManager.RemineEnemyCount - _enemyManager.EnemyMaxCount);
+		_result.OpenResult();
+
 	}
 
-	// 仮でボタン押下でリザルト画面に遷移
-	public void OnClickResult()
-	{
-		SoundManager.Instance.StopBGM();
-		SoundManager.Instance.PlaySE(SoundManager.Se.Decision);
-		TransitFader.Instance.FadeOutAsync("ResultScene").Forget();
-	}
+
 }
