@@ -17,17 +17,11 @@ public class Title : MonoBehaviour
 		if (TransitFader.Instance == null)
 		{
 			SceneManager.LoadScene("StartScene");
+			return;
 		}
 
 		TransitFader.Instance.FadeIn().Forget();
 		SoundManager.Instance.PlayBGM(SoundManager.Bgm.Random_Walker);
-	}
-
-	public void OnClickGameStart()
-	{
-		SoundManager.Instance.StopBGM();
-		SoundManager.Instance.PlaySE(SoundManager.Se.Decision);
-		TransitFader.Instance.FadeOutAsync("TestScene").Forget();
 	}
 
 	private void Update()
@@ -51,12 +45,6 @@ public class Title : MonoBehaviour
 			{
 				pressed = true;
 			}
-		}
-
-		if (!_isGameStart && _isTipsOpen && pressed)
-		{
-			Tips.SetActive(false);
-			OnClickGameStart();
 		}
 
 		if (!_isTipsOpen && !TransitFader.Instance.isFading && pressed)
