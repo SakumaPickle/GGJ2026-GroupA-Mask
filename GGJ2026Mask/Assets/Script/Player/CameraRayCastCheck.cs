@@ -7,6 +7,7 @@ public class CameraRayCastCheck : MonoBehaviour
 {
 	[SerializeField] private Camera _playerCamera;
 	[SerializeField] private InputSystem_Actions _inputActions;
+	[SerializeField] private EnemyManager _enemyManager;
 
 	private GameObject _hitObject;
 	private bool _isTouchUI;
@@ -83,9 +84,25 @@ public class CameraRayCastCheck : MonoBehaviour
 			return;
 		}
 
+		if (IsEnemyObject(_hitObject))
+		{
+			_enemyManager.removeEnemy(_hitObject);
+		}
 		Destroy(_hitObject);
 		_hitObject = null;
 	}
+
+	private bool IsEnemyObject(GameObject targetObj)
+	{
+		if (_enemyManager == null)
+		{
+			return false;
+		}
+
+		var enemy = targetObj.GetComponent<Enemy>();
+		return enemy != null;
+	}
+
 
 	private bool IsAnyTouchOverUI()
 	{
