@@ -5199,6 +5199,10 @@ PrefabInstance:
       propertyPath: field of view
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 4686016337029471168, guid: 8de1fa72442443d4aae9347920703484, type: 3}
+      propertyPath: _outlineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b8ba4faca8905940a965c16c51a58d9, type: 2}
     - target: {fileID: 4724623409836932330, guid: 8de1fa72442443d4aae9347920703484, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
