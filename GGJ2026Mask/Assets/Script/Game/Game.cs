@@ -46,8 +46,6 @@ public class Game : MonoBehaviour
 		{
 			TimeUpAsync().Forget();
 		}
-
-
 	}
 
 	private async UniTask StartEffectAsync()
