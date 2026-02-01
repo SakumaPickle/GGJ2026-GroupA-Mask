@@ -12,6 +12,11 @@ public class TipsDialog : MonoBehaviour
 
 	}
 
+	public void OpenTips()
+	{
+		gameObject.SetActive(true);
+	}
+
 
 	public void OnClickTipsCloseButton()
 	{

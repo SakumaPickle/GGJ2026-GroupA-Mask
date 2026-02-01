@@ -1,10 +1,11 @@
 using Cysharp.Threading.Tasks;
+using StarterAssets;
 using TMPro;
-using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class Result : MonoBehaviour
 {
@@ -32,6 +33,15 @@ public class Result : MonoBehaviour
 
 		_anyKeyDown.SetActive(true);
 		_isClose = true;
+		var inputs = GameObject.Find("UI_Canvas_StarterAssetsInputs_Joysticks");
+
+		Debug.Log(inputs);
+		// TODO:IwataÉVÅ[Éìí≤êÆèIÇÌÇ¡ÇΩÇÁíºÇ∑
+		if (inputs != null)
+		{
+			inputs.GetComponent<StarterAssetsInputs>().cursorLocked = false;
+		}
+
 	}
 
 	private void Update()
@@ -44,15 +54,17 @@ public class Result : MonoBehaviour
 		if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
 			pressed = true;
 
+
 		if (Gamepad.current != null)
 		{
-			foreach (var control in Gamepad.current.allControls)
+			var pad = Gamepad.current;
+
+			if (pad.buttonSouth.wasPressedThisFrame || // A
+				pad.buttonEast.wasPressedThisFrame || // B
+				pad.buttonWest.wasPressedThisFrame || // X
+				pad.buttonNorth.wasPressedThisFrame)   // Y
 			{
-				if (control is ButtonControl button && button.wasPressedThisFrame)
-				{
-					pressed = true;
-					break;
-				}
+				pressed = true;
 			}
 		}
 

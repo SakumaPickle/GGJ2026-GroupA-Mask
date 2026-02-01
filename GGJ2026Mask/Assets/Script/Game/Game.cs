@@ -52,12 +52,14 @@ public class Game : MonoBehaviour
 
 	private async UniTask EnemyLoadWaitFadeAsync()
 	{
-		await UniTask.WaitUntil(() => _enemyManager.IsInitialize);
+		await UniTask.WaitUntil(() => _enemyManager.IsInitialize, cancellationToken: destroyCancellationToken);
 
 		if (TransitFader.Instance != null)
 		{
 			TransitFader.Instance.FadeIn().Forget();
 			SoundManager.Instance.PlayBGM(SoundManager.Bgm.make_me_happy);
+
+			await UniTask.WaitUntil(() => !TransitFader.Instance.isFading, cancellationToken: destroyCancellationToken);
 		}
 
 		await StartEffectAsync();
