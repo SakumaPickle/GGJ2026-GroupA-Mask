@@ -17,6 +17,8 @@ public class Game : MonoBehaviour
 	private bool _isFinish = false;
 	private bool _isInitialize = false;
 
+	private int _getCount;
+
 	public bool IsPlaying => _isInitialize && !_isFinish;
 
 	void Start()
@@ -39,7 +41,8 @@ public class Game : MonoBehaviour
 
 		_isFinish = _gameTime <= 0 || _enemyManager.RemineEnemyCount <= 0;
 
-		_remineEnemyText.text = $"Enemy:{_enemyManager.RemineEnemyCount}/{_enemyManager.EnemyMaxCount}";
+		_getCount = _enemyManager.EnemyMaxCount - _enemyManager.RemineEnemyCount;
+		_remineEnemyText.text = $"Count:{_getCount}";
 
 		if (_isFinish)
 		{
@@ -79,8 +82,8 @@ public class Game : MonoBehaviour
 
 		await _finishText.DOLocalMoveX(1000, 1f).ToUniTask(cancellationToken: destroyCancellationToken);
 
-		_result.SetResult(_enemyManager.RemineEnemyCount - _enemyManager.EnemyMaxCount);
-		_result.OpenResult();
+		_result.SetResult(_getCount);
+		_result.OpenResultAsync().Forget();
 
 	}
 
