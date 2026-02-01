@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 	private EnemyManager _manager;
 	private VisibleCheck _visibleCheck;
 
-	[SerializeField] private float timer = 10f;
+	[SerializeField] private float timer = 6f;
 
 	private float _countDown;
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,5 +34,10 @@ public class Enemy : MonoBehaviour
 				_countDown = timer / 2;
 			}
 		}
+		else if (transform.position.y < 0)
+		{
+			//fell through the floor, get back in the game
+			_manager.moveEnemy(gameObject);
+        }
 	}
 }
