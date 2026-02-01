@@ -40,6 +40,9 @@ public class EnemyManager : MonoBehaviour
 		{
 			if (!nextSpawns[i].GetComponent<VisibleCheck>().m_Visible)
 			{
+				var rb = enemy.GetComponent<Rigidbody>();
+				rb.linearVelocity = Vector3.zero;
+				rb.angularVelocity = Vector3.zero;
 				enemy.transform.position = nextSpawns[i].transform.position;
 				EnemyTracker[enemy] = nextRoom;
 				return true;
